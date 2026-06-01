@@ -110,7 +110,7 @@ export default function Navbar() {
             <a href="https://www.primetimemedia.in/" target="_blank" rel="noopener noreferrer">
               <img
                 src="/images/logo.png"
-                alt="Time Cyber media logo"
+                alt="TIME Cyber Media Logo"
                 className="h-8 w-auto object-contain cursor-pointer"
               />
             </a>
@@ -156,7 +156,7 @@ export default function Navbar() {
                   <a href="https://www.timecybermedia.com/" target="_blank" rel="noopener noreferrer">
                     <img
                       src="/images/logo.png"
-                      alt="time cyber media logo"
+                      alt="TIME Cyber Media Logo"
                       className="absolute top-[-0.5px] left-[-3px] h-[70px] rounded-md w-auto max-w-none object-contain z-50 drop-shadow-md cursor-pointer"
                     />
                   </a>
@@ -224,7 +224,7 @@ export default function Navbar() {
               <a href="https://www.timecybermedia.com/" target="_blank" rel="noopener noreferrer" className="hover:scale-105 transition-transform duration-300">
                 <img
                   src="/images/logo.png"
-                  alt="Logo"
+                  alt="TIME Cyber Media Logo"
                   className="h-8 w-auto object-contain cursor-pointer brightness-110"
                 />
               </a>
@@ -249,7 +249,7 @@ export default function Navbar() {
             <a href="https://www.timecybermedia.com/" target="_blank" rel="noopener noreferrer">
               <img
                 src="/images/logo.png"
-                alt="PrimeTime Logo"
+                alt="TIME Cyber Media Logo"
                 className="h-9 w-auto object-contain"
                 style={{ maxWidth: 40 }}
               />
@@ -430,7 +430,7 @@ function MobileMenuDrawer({
               <div className="flex items-center gap-3">
                 <img
                   src="/images/logo.png"
-                  alt="Logo"
+                  alt="TIME Cyber Media Logo"
                   className="h-10 w-auto object-contain drop-shadow-[0_0_8px_rgba(16,185,129,0.3)]"
                 />
                 <div className="flex flex-col leading-none">

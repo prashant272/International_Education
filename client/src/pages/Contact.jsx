@@ -45,12 +45,12 @@ export default function Contact() {
         title="Contact Us"
         subtitle="We'd love to connect. Reach out for inquiries about nominations, partnerships, media coverage, or sponsorships."
       >
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 pb-2">
+        <section className="max-w-5xl mx-auto px-4 sm:px-6 pb-2">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
 
             {/* Left – Contact Details */}
             <SlideIn from="left">
-              <div className="space-y-5">
+              <address className="space-y-5 not-italic">
                 <h2 className="text-xl font-black text-gradient-prestige font-serif mb-6">Contact Information</h2>
 
                 {/* Email */}
@@ -158,12 +158,12 @@ export default function Contact() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </address>
             </SlideIn>
 
             {/* Right – Social + Office info */}
             <SlideIn from="right" delay={0.1}>
-              <div className="space-y-6">
+              <aside className="space-y-6">
 
                 {/* Social Media */}
                 <div className="glass-card border border-indigo-500/15 p-6">
@@ -250,10 +250,11 @@ export default function Contact() {
                     💬 Chat on WhatsApp
                   </a>
                 </div>
-              </div>
+              </aside>
             </SlideIn>
           </div>
-        </div>
+        </section>
+
       </PageHero>
 
       {/* Bottom gradient line */}

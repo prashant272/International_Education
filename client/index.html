@@ -34,6 +34,55 @@
   <link rel="icon" type="image/png" href="/logo.png" />
   <!-- Canonical -->
   <link rel="canonical" href="https://internationaleducation.in" />
+
+
+  <!-- SEO Structured Data for Contact, Address, and Social Media -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "TIME Cyber Media Pvt Ltd.",
+      "url": "https://internationaleducation.in/",
+      "logo": "https://internationaleducation.in/images/logo_full.png",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+91-98210-20995",
+          "contactType": "customer service"
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+91-98730-04416",
+          "contactType": "customer service"
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/TimeCyberMedia",
+        "https://www.instagram.com/TimeCyberMedia/",
+        "https://www.youtube.com/@timecybermedia",
+        "https://www.linkedin.com/company/timecybermedia"
+      ],
+      "address": [
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "C-31, 3rd Floor, Nawada Housing Complex, Opp. Metro Pillar No 792, Shivaji Marg",
+          "addressLocality": "New Delhi",
+          "postalCode": "110059",
+          "addressCountry": "IN"
+        },
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "A/201 202, Vinayak Shopping Centre, Pravati Cross, Vasai Station Rd, opp. Union Bank, Vasai West",
+          "addressLocality": "Mumbai",
+          "addressRegion": "Maharashtra",
+          "postalCode": "401202",
+          "addressCountry": "IN"
+        }
+      ]
+    }
+  </script>
+
+
   <!-- ✅ Meta Pixel Code (Correct Placement in HEAD) -->
   <script>
     // Only initialize Facebook Pixel on the production domain to prevent 422 errors in development and staging
@@ -62,7 +111,7 @@
   <!-- ✅ Meta Pixel Code (Body Part) -->
   <noscript>
     <img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=703397972608637&ev=PageView&noscript=1" />
+      src="https://www.facebook.com/tr?id=703397972608637&ev=PageView&noscript=1" alt="" />
   </noscript>
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
