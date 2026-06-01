@@ -17,6 +17,7 @@ export function getBaseUrl() {
     return "https://api.internationaleducation.in";
   }
 
+
   // 3. Fallback to local origin for development
   const rawDefault = DEFAULT_BASE_URL.replace(/\/$/, "");
   return rawDefault.endsWith("/api") ? rawDefault.slice(0, -4) : rawDefault;
