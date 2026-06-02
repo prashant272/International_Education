@@ -347,7 +347,7 @@ export default function Home() {
   };
 
   return (
-    <div className={`w-full text-[#f5f3f0]  `}>
+    <main className={`w-full text-[#f5f3f0]  `}>
       {/* SEO H1 - Hidden */}
       <h1 className="sr-only mt-24 ">
         International Education Award, 2026 – International Education Award, 2026 by TIME Cyber Media Pvt Ltd
@@ -402,11 +402,11 @@ export default function Home() {
         <div className="relative z-20 flex min-h-screen flex-col items-center justify-center px-4 sm:px-6 md:px-8 pt-22 pb-12 text-center">
 
           {/* ===== HERO TEXT ===== */}
-          <div className="max-w-[48rem] mx-auto space-y-2 sm:space-y-1 animate-fade-in pt-0.5 relative z-20">
+          <header className="max-w-[48rem] mx-auto space-y-2 sm:space-y-1 animate-fade-in pt-0.5 relative z-20">
             {/* Backdrop Spotlight */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] -z-10 pointer-events-none rounded-full" style={{ background: 'radial-gradient(circle, rgba(4, 120, 87, 0.16) 0%, transparent 60%)' }} />
 
-            <h1 className="text-[16px] xs:text-[20px] sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black font-heading tracking-tight leading-tight text-white px-2 [text-shadow:_0_0_30px_rgba(251,113,133,0.4),_0_0_60px_rgba(129,140,248,0.2)]">
+            <h2 className="text-[16px] xs:text-[20px] sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black font-heading tracking-tight leading-tight text-white px-2 [text-shadow:_0_0_30px_rgba(251,113,133,0.4),_0_0_60px_rgba(129,140,248,0.2)]">
               <span className="inline-block whitespace-nowrap text-center">
                 <span className="text-[#EEF2FF] drop-shadow-[0_0_15px_rgba(129,140,248,0.5)]">International </span>{" "}
                 <span className="bg-gradient-to-r from-[#60A5FA] via-[#818CF8] to-[#FB7185] bg-clip-text text-transparent inline-block font-black filter drop-shadow-[0_0_50px_rgba(251,113,133,0.8)]">
@@ -414,7 +414,7 @@ export default function Home() {
                 </span>{" "}
                 <span className="text-[#EEF2FF] drop-shadow-[0_0_15px_rgba(129,140,248,0.4)]">, 2026</span>
               </span>
-            </h1>
+            </h2>
             <div className="mx-auto w-24 sm:w-32 h-1 bg-gradient-to-r from-transparent via-[#FB7185] to-transparent rounded-full -mt-2" />
             <p className="mt-2 text-[12px] xs:text-[14px] sm:text-base md:text-lg lg:text-xl text-white font-black leading-relaxed [text-shadow:_0_2px_15px_rgba(0,0,0,1)] max-w-none mx-auto whitespace-normal sm:whitespace-nowrap">
               Organised by{" "}
@@ -423,14 +423,14 @@ export default function Home() {
               </span>{" "}
               –  Award Events
             </p>
-          </div>
+          </header>
 
           {/* ===== EVENTS SECTION ===== */}
           <div className="w-full max-w-[1600px] mx-auto relative z-30">
             <div className="w-full relative z-15 px-3">
               {(() => {
                 const EventCard = ({ event }) => (
-                  <div className="group relative w-full max-w-[95%] sm:max-w-[520px] mx-auto h-full min-h-[450px] flex flex-col rounded-[1.5rem] overflow-hidden transition-all duration-700 hover:-translate-y-3 hover:scale-[1.02] p-4 xs:p-5 sm:p-6 md:p-8 bg-slate-900/40 bg-black/20 backdrop-blur-md border border-white/20 shadow-2xl shadow-black/60">
+                  <article className="group relative w-full max-w-[95%] sm:max-w-[520px] mx-auto h-full min-h-[450px] flex flex-col rounded-[1.5rem] overflow-hidden transition-all duration-700 hover:-translate-y-3 hover:scale-[1.02] p-4 xs:p-5 sm:p-6 md:p-8 bg-slate-900/40 bg-black/20 backdrop-blur-md border border-white/20 shadow-2xl shadow-black/60">
 
                     {/* 4 Corner Brackets */}
                     <div className="absolute top-4 left-4 w-4 h-4 border-t-2 border-l-2 border-[#FB7185] rounded-tl-lg" />
@@ -492,7 +492,7 @@ export default function Home() {
 
                     {/* Shine Effect */}
                     <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000 pointer-events-none" />
-                  </div>
+                  </article>
                 );
 
                 if (events.length === 1) {
@@ -627,7 +627,7 @@ export default function Home() {
                 </div>
               </div>
               {/* ==== RIGHT: Key Dates ==== */}
-              <div className="flex flex-col justify-center h-full lg:pl-8 xl:pl-16 space-y-8 text-left">
+              <aside className="flex flex-col justify-center h-full lg:pl-8 xl:pl-16 space-y-8 text-left" aria-label="Key Dates">
                 <div>
                   <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight text-left">
                     <span className="bg-gradient-to-r from-[#EEF2FF] via-[#818CF8] to-[#4338CA] bg-clip-text text-transparent">
@@ -692,7 +692,7 @@ export default function Home() {
                     </button>
                   </div>
                 </div>
-              </div>
+              </aside>
             </div>
 
             {/* Bottom Decorative */}
@@ -1132,7 +1132,7 @@ export default function Home() {
                       flex items-center justify-center p-6
                     ">
                       {partner.logo ? (
-                        <img src={partner.logo} alt={partner.name} className="w-full h-full object-contain filter group-hover:scale-110 transition-transform duration-500" loading="lazy" />
+                        <img src={partner.logo} alt={partner.name || "Media Partner"} className="w-full h-full object-contain filter group-hover:scale-110 transition-transform duration-500" loading="lazy" />
                       ) : (
                         <span className="text-indigo-400 text-4xl font-black">{partner.name?.[0]}</span>
                       )}
@@ -1145,6 +1145,6 @@ export default function Home() {
         </section>
       </div>
 
-    </div>
+    </main>
   );
 }

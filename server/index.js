@@ -99,7 +99,7 @@ const mongooseOptions = {
 // Monitor MongoDB Connection Events to handle failures gracefully
 mongoose.connection.on("connected", () => {
   console.log("🟢 MongoDB connection established successfully.");
-  console.log("🟢 MongoDB connection established successfully.", config.MONGO_URI);
+
 });
 
 mongoose.connection.on("error", (err) => {
@@ -162,6 +162,8 @@ app.use("/api/inquiries", inquiryRoutes);
 
 // Global Error Handler
 app.use(errorHandler);
+
+app.set('trust proxy', true); // Trust first proxy
 
 const server = app.listen(config.PORT, () => console.log(`Server running on port ${config.PORT}`));
 server.timeout = 600000; // 10 minutes for large photo uploads

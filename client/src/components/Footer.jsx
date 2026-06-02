@@ -39,11 +39,11 @@ export default function Footer() {
             ">
 
               {/* ==== ABOUT/BRAND ==== */}
-              <div className="flex flex-col h-full items-start gap-x-4">
+              <section className="flex flex-col h-full items-start gap-x-4" aria-label="About Us">
                 <div className="flex items-center space-x-0.5 mb-3">
                   <img
                     src="/images/logo_full.png"
-                    alt="GHA Logo"
+                    alt="International Education Award Logo"
                     className="w-20 h-20 rounded-full shadow-md ring-2 ring-indigo-500/50 bg-white object-contain p-1"
                     loading="lazy"
                   />
@@ -59,10 +59,10 @@ export default function Footer() {
                 <p className="text-sm lg:text-base font-medium leading-relaxed opacity-80 text-left">
                   Recognising outstanding leadership, innovation & excellence in international education – celebrating visionary organisations and individuals shaping tomorrow.
                 </p>
-              </div>
+              </section>
 
               {/* ==== QUICK LINKS ==== */}
-              <div className="text-left">
+              <nav className="text-left" aria-label="Quick Links">
                 <h3
                   className="font-semibold mb-5 text-lg text-[#f8fafc] tracking-wide 
                     border-l-4 pl-3 border-indigo-500/40"
@@ -100,10 +100,10 @@ export default function Footer() {
                     </Link>
                   </li>
                 </ul>
-              </div>
+              </nav>
 
               {/* ==== INFORMATION ==== */}
-              <div className="text-left">
+              <nav className="text-left" aria-label="Information">
                 <h3
                   className="font-semibold mb-5 text-lg text-[#f8fafc] tracking-wide
                     border-l-4 pl-3 border-indigo-500/40"
@@ -132,10 +132,10 @@ export default function Footer() {
                     </Link>
                   </li>
                 </ul>
-              </div>
+              </nav>
 
               {/* ==== OTHER SERVICES ==== */}
-              <div className="text-left">
+              <nav className="text-left" aria-label="Other Services">
                 <h3
                   className="font-semibold mb-5 text-lg text-[#f8fafc] tracking-wide
                     border-l-4 pl-3 border-indigo-500/40"
@@ -214,10 +214,10 @@ export default function Footer() {
                     </a>
                   </li>
                 </ul>
-              </div>
+              </nav>
 
               {/* ==== REACH US ==== */}
-              <div className="text-left">
+              <address className="text-left not-italic">
                 <h3
                   className="font-semibold mb-5 text-lg text-[#f8fafc] tracking-wide
                     border-l-4 pl-3 border-indigo-500/40"
@@ -262,7 +262,7 @@ export default function Footer() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </address>
             </div>
           </div>
 

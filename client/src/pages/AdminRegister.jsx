@@ -50,9 +50,9 @@ export default function AdminRegister() {
                         {/* Admin Registration Form Card Wrapper */}
                         <div className="w-full glass-card border border-white/10 rounded-[2.5rem] p-8 md:p-12 shadow-[0_32px_64px_-16px_rgba(0,0,0,0.8)] group overflow-hidden">
                         <div className="text-center mb-8">
-                            <h1 className="text-2xl md:text-3xl font-black bg-gradient-to-b from-white via-white to-indigo-400 bg-clip-text text-transparent tracking-tight mb-2 uppercase">
+                            <h2 className="text-2xl md:text-3xl font-black bg-gradient-to-b from-white via-white to-indigo-400 bg-clip-text text-transparent tracking-tight mb-2 uppercase">
                                 Admin Setup
-                            </h1>
+                            </h2>
                             <p className="text-indigo-400/40 text-[8px] font-black uppercase tracking-[0.5em] ml-1">
                                 New Administrative Node
                             </p>

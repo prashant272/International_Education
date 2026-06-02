@@ -1,22 +1,26 @@
 
 
 export function getBaseUrl() {
-  // Use production API URL explicitly when running in production mode
-  if (import.meta.env?.PROD) {
-    return "https://api.globalinternational educationawards.com";
-  }
-
-  // Prefer explicit API base URL if provided in .env
+  // 1. Try to get the API URL from .env variables first
   const fromEnv =
     typeof import.meta !== "undefined"
       ? import.meta.env?.VITE_API_BASE_URL || import.meta.env?.VITE_API_URL
       : undefined;
 
-  const raw = (fromEnv || DEFAULT_BASE_URL).replace(/\/$/, "");
+  if (fromEnv) {
+    const raw = fromEnv.replace(/\/$/, "");
+    return raw.endsWith("/api") ? raw.slice(0, -4) : raw;
+  }
 
-  const normalized = raw.endsWith("/api") ? raw.slice(0, -4) : raw;
+  // 2. If no .env is found, fallback to hardcoded production URL
+  if (import.meta.env?.PROD) {
+    return "https://api.internationaleducation.in";
+  }
 
-  return normalized;
+
+  // 3. Fallback to local origin for development
+  const rawDefault = DEFAULT_BASE_URL.replace(/\/$/, "");
+  return rawDefault.endsWith("/api") ? rawDefault.slice(0, -4) : rawDefault;
 }
 
 async function request(path, { method = "GET", token, body } = {}) {
@@ -131,8 +135,8 @@ export function fetchPreviousEditions() {
 }
 
 export function fetchPreviousEditionByYear(year, slug) {
-  const url = slug 
-    ? `/api/previous-editions/${year}?slug=${slug}` 
+  const url = slug
+    ? `/api/previous-editions/${year}?slug=${slug}`
     : `/api/previous-editions/${year}`;
   return request(url, { method: "GET" });
 }
@@ -163,8 +167,8 @@ export function fetchUpcomingEditions() {
 }
 
 export function fetchUpcomingEditionByYear(year, title) {
-  const url = title 
-    ? `/api/upcoming-editions/${year}?title=${title}` 
+  const url = title
+    ? `/api/upcoming-editions/${year}?title=${title}`
     : `/api/upcoming-editions/${year}`;
   return request(url, { method: "GET" });
 }
@@ -189,7 +193,7 @@ export function deleteUpcomingEdition(id, token) {
   return request(`/api/upcoming-editions/${id}`, { method: "DELETE", token });
 }
 
-/* ---------------- Inquiries / Leads (Quick Access) ---------------- */
+/* ---------------- Inquiries / (Quick Access) ---------------- */
 
 /**
  * Triggers backend WhatsApp/SMS OTP code generation for a phone number

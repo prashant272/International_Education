@@ -874,7 +874,7 @@ export default function AdminDashboard() {
                 <ShieldCheck size={24} className="group-hover:scale-110 transition-transform" />
               </div>
               <div>
-                <h1 className="text-xl font-black uppercase tracking-widest text-white leading-none mb-1">Admin</h1>
+                <h2 className="text-xl font-black uppercase tracking-widest text-white leading-none mb-1">Admin</h2>
                 <div className="flex items-center gap-1.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-indigo-500 animate-pulse" />
                   <p className="text-[8px] text-white/40 font-black uppercase tracking-[0.2em]">System Optimal</p>

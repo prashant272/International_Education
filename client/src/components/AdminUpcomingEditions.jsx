@@ -289,7 +289,7 @@ export default function AdminUpcomingEditions({ customToken }) {
                                             <div className="flex flex-wrap gap-4">
                                                 {existingImages.map((imgUrl, i) => (
                                                     <div key={i} className="relative w-24 h-24 rounded-2xl overflow-hidden border border-white/10 group">
-                                                        <img src={imgUrl} alt="Archive" className="w-full h-full object-cover" />
+                                                        <img src={imgUrl} alt="Archive Edition Thumbnail" className="w-full h-full object-cover" />
                                                         <button type="button" onClick={() => removeExistingImage(imgUrl)} className="absolute inset-0 bg-red-500/80 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all font-black text-xs">REMOVE</button>
                                                     </div>
                                                 ))}
@@ -317,7 +317,7 @@ export default function AdminUpcomingEditions({ customToken }) {
                                                 <div className="flex flex-wrap gap-4">
                                                     {images.map((file, i) => (
                                                         <div key={i} className="relative w-24 h-24 rounded-2xl overflow-hidden border border-indigo-500/20 group">
-                                                            <img src={URL.createObjectURL(file)} alt="Staged" className="w-full h-full object-cover" />
+                                                            <img src={URL.createObjectURL(file)} alt="Staged Upload Image" className="w-full h-full object-cover" />
                                                             <button type="button" onClick={() => setImages(prev => prev.filter((_, idx) => idx !== i))} className="absolute inset-0 bg-red-500/80 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all font-black text-xs">CANCEL</button>
                                                         </div>
                                                     ))}
