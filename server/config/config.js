@@ -6,7 +6,7 @@ export const config = {
     MONGO_URI: process.env.MONGO_URI || "mongodb://127.0.0.1/primetime_awards",
     MONGO_DB_NAME: process.env.MONGO_DB_NAME,
     JWT_SECRET: process.env.JWT_SECRET || "dev_primetime_secret_change_me",
-    FRONTEND_URL: process.env.FRONTEND_URL || "https://www.globalinternational educationawards.com",
+    FRONTEND_URL: process.env.FRONTEND_URL,
     ADMIN: {
         EMAIL: process.env.ADMIN_EMAIL,
         PASSWORD: process.env.ADMIN_PASSWORD,
@@ -23,7 +23,7 @@ export const config = {
         PORT: parseInt(process.env.BREVO_SMTP_PORT, 10) || 587,
         USER: process.env.BREVO_SMTP_USER || "apikey",
         PASS: process.env.BREVO_SMTP_PASS,
-        FROM: process.env.BREVO_FROM_EMAIL || "noreply@globalinternational educationawards.com",
+        FROM: process.env.BREVO_FROM_EMAIL,
     },
     GOOGLE: {
         CLIENT_ID: process.env.GOOGLE_CLIENT_ID,

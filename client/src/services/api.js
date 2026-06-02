@@ -193,7 +193,7 @@ export function deleteUpcomingEdition(id, token) {
   return request(`/api/upcoming-editions/${id}`, { method: "DELETE", token });
 }
 
-/* ---------------- Inquiries / Leads (Quick Access) ---------------- */
+/* ---------------- Inquiries / (Quick Access) ---------------- */
 
 /**
  * Triggers backend WhatsApp/SMS OTP code generation for a phone number
