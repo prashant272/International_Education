@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { fetchUpcomingEditionByYear } from "../services/api.js";
-import VideoGallery from "../components/VideoGallery.jsx";
+
 import { PageHero } from "../components/Motion.jsx";
 import { Calendar, MapPin, Shield, Sparkles, Handshake, Megaphone } from "lucide-react";
-
+import GuestSlider from "../components/GuestSlider.jsx"
 // Banner slider with auto-scroll and modern UI
 function BannerSlider({ images, year }) {
     const [curr, setCurr] = useState(0);
@@ -71,46 +71,6 @@ function BannerSlider({ images, year }) {
                             }`}
                     />
                 ))}
-            </div>
-        </div>
-    );
-}
-
-// Event Gallery - Scrolling Image Marquee
-function EventGallery({ images }) {
-    if (images.length === 0) return null;
-
-    return (
-        <div className="mb-16 sm:mb-24 overflow-hidden relative">
-            <div className="flex items-center justify-center gap-3 mb-8 sm:mb-12">
-                <div className="h-px w-12 bg-gradient-to-r from-transparent to-[#d4af37]"></div>
-                <h3 className="text-2xl sm:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-200 to-slate-400 tracking-wide uppercase">
-                    Promotional Media
-                </h3>
-                <div className="h-px w-12 bg-gradient-to-l from-transparent to-[#d4af37]"></div>
-            </div>
-
-            <div className="relative group">
-                {/* Soft edge masks */}
-                <div className="absolute top-0 left-0 w-16 sm:w-40 h-full bg-gradient-to-r from-[#020617] to-transparent z-10 pointer-events-none"></div>
-                <div className="absolute top-0 right-0 w-16 sm:w-40 h-full bg-gradient-to-l from-[#020617] to-transparent z-10 pointer-events-none"></div>
-
-                <div className="flex gap-4 sm:gap-6 animate-marquee hover:[animation-play-state:paused]">
-                    {[...images, ...images].map((img, i) => (
-                        <div
-                            key={i}
-                            className="shrink-0 w-[260px] h-[180px] sm:w-[380px] sm:h-[260px] md:w-[450px] md:h-[300px] rounded-[1.5rem] sm:rounded-[2rem] overflow-hidden border border-white/5 shadow-2xl transition-all duration-500 hover:scale-[1.03] hover:border-[#d4af37]/40 bg-indigo-950 group/item relative"
-                        >
-                            <img
-                                src={img}
-                                alt={`Highlight ${i}`}
-                                className="w-full h-full object-cover relative z-10 transition-transform duration-700 group-hover/item:scale-110"
-                                loading="lazy"
-                            />
-                            <div className="absolute inset-0 bg-black/20 group-hover/item:bg-transparent transition-colors duration-500 z-20"></div>
-                        </div>
-                    ))}
-                </div>
             </div>
         </div>
     );
@@ -194,7 +154,7 @@ export default function UpcomingEditionDetail() {
                 <div className="lg:col-span-8 space-y-8">
                     <div className="bg-indigo-950 border border-white/10 rounded-[2rem] p-8 md:p-12 shadow-2xl">
                         <h2 className="text-3xl md:text-5xl font-black mb-6 leading-tight bg-gradient-to-r from-[#60A5FA] via-[#818CF8] to-[#FB7185] bg-clip-text text-transparent">
-                            {edition.title || "International Education Awards"}, {displayYear}  - {locationString}
+                            {edition.title || "International Education Awards"}
                         </h2>
                         <div className="w-24 h-1 bg-gradient-to-r from-[#d4af37] to-transparent mb-8 rounded-full"></div>
 
@@ -292,8 +252,9 @@ export default function UpcomingEditionDetail() {
                 </div>
             </div>
 
-            <EventGallery images={images} />
-            <VideoGallery videoLinks={edition.videoLinks} />
+            {/* // Guest Slider */}
+            <GuestSlider />
+
 
             {/* Evaluation Architecture */}
             <section className="bg-indigo-950 p-8 sm:p-14 md:p-16 rounded-[2rem] sm:rounded-[3rem] border border-white/10 shadow-2xl relative overflow-hidden mt-16">
