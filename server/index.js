@@ -40,10 +40,13 @@ app.use(cors({
                         
     const cleanOrigin = origin.replace(/\/$/, "");
     
+    console.log(`[CORS Check] Origin: ${origin}, IsLocalhost: ${isLocalhost}`);
+    
     if (isLocalhost || allowedOrigins.includes(cleanOrigin)) {
       callback(null, true);
     } else {
-      callback(new Error("Not allowed by CORS"));
+      console.log(`[CORS Blocked] Origin: ${origin}`);
+      callback(null, false);
     }
   },
   methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
