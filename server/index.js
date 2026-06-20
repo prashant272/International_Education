@@ -21,12 +21,31 @@ import session from "express-session";
 import "./config/passport.js";
 import { signToken } from "./middleware/authMiddleware.js";
 
+const allowedOrigins = [
+  "https://international-education.vercel.app",
+  "https://internationaleducationaward.com",
+  "https://www.internationaleducationaward.com"
+];
+
 const app = express();
 app.use(cors({
-  origin: [
-    config.FRONTEND_URL,
-    config.FRONTEND_URL ? config.FRONTEND_URL.replace(/\/$/, "") : "",
-  ],
+  origin: (origin, callback) => {
+    // Allow requests with no origin (like mobile apps, curl, or server-to-server)
+    if (!origin) return callback(null, true);
+    
+    const isLocalhost = origin.startsWith("http://localhost:") || 
+                        origin.startsWith("http://127.0.0.1:") || 
+                        origin === "http://localhost" || 
+                        origin === "http://127.0.0.1";
+                        
+    const cleanOrigin = origin.replace(/\/$/, "");
+    
+    if (isLocalhost || allowedOrigins.includes(cleanOrigin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
   methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true
