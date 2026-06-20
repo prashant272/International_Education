@@ -192,7 +192,7 @@ export default function Navbar() {
             </div>
           </div>
           <nav className="bg-transparent h-12">
-            <div className="max-w-7xl mx-auto px-6 h-full flex justify-center items-center gap-4 lg:gap-5 xl:gap-6 text-[13px] lg:text-sm xl:text-[15px]">
+            <div className="max-w-7xl mx-auto px-6 h-full flex justify-center items-center gap-2.5 lg:gap-3 xl:gap-4 2xl:gap-5 text-[11px] lg:text-[11px] xl:text-[13px] 2xl:text-[14px]">
               {menuLinks("white", undefined, headerRef, isUser, false, editions, upcomingEditions)}
             </div>
           </nav>
@@ -207,7 +207,7 @@ export default function Navbar() {
                bg-slate-950/85 backdrop-blur-lg text-white 
                rounded-full shadow-[0_25px_60px_rgba(0,0,0,0.6),0_0_30px_rgba(16,185,129,0.25)] 
                border border-indigo-500/30 
-               px-6 lg:px-6 xl:px-8 py-2.5 flex items-center gap-4 lg:gap-6 xl:gap-10 text-[13px] lg:text-sm xl:text-[15px]
+               px-3 lg:px-3 xl:px-5 2xl:px-6 py-2.5 flex items-center gap-2 lg:gap-2 xl:gap-5 2xl:gap-6 text-[11px] lg:text-[11px] xl:text-[13px] 2xl:text-[14px]
                group
              "
             style={{
@@ -230,7 +230,7 @@ export default function Navbar() {
               </a>
               <div className="h-6 w-px bg-white/10 mx-1"></div>
             </div>
-            <div className="relative flex gap-4 lg:gap-5 xl:gap-6 items-center z-10">
+            <div className="relative flex gap-2.5 lg:gap-3 xl:gap-4 2xl:gap-5 items-center z-10">
               {menuLinks("white", undefined, headerRef, isUser, false, editions, upcomingEditions)}
             </div>
           </div>
@@ -315,14 +315,14 @@ const menuLinks = (color, onClick, headerRef, isUser, showDashboard = true, edit
       <NavItem to="/" icon={<FaHome />} label="Home" color={color} onClick={createNavHandler(onClick)} />
       <NavItem to="/categories" icon={<FaListAlt />} label="Category" color={color} onClick={createNavHandler(onClick)} />
       <NavItem to="/jury" icon={<FaUsers />} label="Guest" color={color} onClick={createNavHandler(onClick)} />
-      <NavItem to="/guidelines" icon={<FaBook />} label={<><span className="hidden xl:inline">Entry </span>Guidelines</>} color={color} onClick={createNavHandler(onClick)} />
-      <NavItem to="/judging" icon={<FaGavel />} label={<><span className="hidden xl:inline">Selection </span>Process</>} color={color} onClick={createNavHandler(onClick)} />
+      <NavItem to="/guidelines" icon={<FaBook />} label="Entry Guidelines" color={color} onClick={createNavHandler(onClick)} />
+      <NavItem to="/judging" icon={<FaGavel />} label="Selection Process" color={color} onClick={createNavHandler(onClick)} />
       <NavItem to="/terms" icon={<FaFileContract />} label="T&C" color={color} onClick={createNavHandler(onClick)} />
-      <NavItem to="/contact" icon={<FaEnvelope />} label={<><span className="">Contact </span>Us</>} color={color} onClick={createNavHandler(onClick)} />
-      <UpcomingNavDropdown icon={<FaHistory />} label={<><span className="">Upcoming </span>Awards</>} color={color} options={upcomingEditions} onClick={createNavHandler(onClick)} />
-      <NavDropdown icon={<FaHistory />} label={<><span className="">Previous </span>Editions</>} color={color} options={editions} onClick={createNavHandler(onClick)} />
+      <NavItem to="/contact" icon={<FaEnvelope />} label="Contact Us" color={color} onClick={createNavHandler(onClick)} />
+      <UpcomingNavDropdown icon={<FaHistory />} label="Upcoming Awards" color={color} options={upcomingEditions} onClick={createNavHandler(onClick)} />
+      <NavDropdown icon={<FaHistory />} label="Previous Editions" color={color} options={editions} onClick={createNavHandler(onClick)} />
       <NavItem to="/faq" icon={<FaQuestionCircle />} label="FAQ" color={color} onClick={createNavHandler(onClick)} />
-      <NavItem to="/nominate" icon={<FaRegEdit />} label={<>Nominate<span className="hidden xl:inline"> Now</span></>} color={color} onClick={createNavHandler(onClick)} isSpecial={true} />
+      <NavItem to="/nominate" icon={<FaRegEdit />} label="Nominate Now" color={color} onClick={createNavHandler(onClick)} isSpecial={true} />
       {isUser && showDashboard && (
         <NavItem
           to="/dashboard"
@@ -349,7 +349,7 @@ function NavItem({ to, icon, label, color, onClick, isSpecial }) {
         }
       >
         <span className="text-[11px]">{icon}</span>
-        <span>{label}</span>
+        <span className="whitespace-nowrap">{label}</span>
       </NavLink>
     );
   }
@@ -370,7 +370,7 @@ function NavItem({ to, icon, label, color, onClick, isSpecial }) {
       }
     >
       <span className="text-[11px]">{icon}</span>
-      <span>{label}</span>
+      <span className="whitespace-nowrap">{label}</span>
     </NavLink>
   );
 }
@@ -540,7 +540,7 @@ function NavDropdown({ icon, label, color, options, onClick }) {
           }`}
       >
         <span className="text-[11px]">{icon}</span>
-        <span>{label}</span>
+        <span className="whitespace-nowrap">{label}</span>
       </NavLink>
 
       <div
@@ -558,7 +558,7 @@ function NavDropdown({ icon, label, color, options, onClick }) {
                 onClick={() => { setOpen(false); if (onClick) onClick(); }}
                 className={`px-5 py-2.5 text-sm transition-colors ${isAct ? 'bg-indigo-600/20 font-bold border-l-4 border-indigo-400 text-white' : 'text-indigo-100 hover:bg-white/10 hover:text-white border-l-4 border-transparent'}`}
               >
-                {opt.title} ({opt.year})
+                {opt.title}
               </NavLink>
             );
           })}
@@ -607,7 +607,7 @@ function UpcomingNavDropdown({ icon, label, color, options, onClick }) {
           }`}
       >
         <span className="text-[11px]">{icon}</span>
-        <span>{label}</span>
+        <span className="whitespace-nowrap">{label}</span>
       </NavLink>
 
       <div
@@ -625,7 +625,7 @@ function UpcomingNavDropdown({ icon, label, color, options, onClick }) {
                 onClick={() => { setOpen(false); if (onClick) onClick(); }}
                 className={`px-5 py-2.5 text-sm transition-colors ${isAct ? 'bg-indigo-600/20 font-bold border-l-4 border-indigo-400 text-white' : 'text-indigo-100 hover:bg-white/10 hover:text-white border-l-4 border-transparent'}`}
               >
-                {opt.title} ({opt.year})
+                {opt.title}
               </NavLink>
             );
           })}

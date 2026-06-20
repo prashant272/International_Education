@@ -26,11 +26,6 @@ app.use(cors({
   origin: [
     config.FRONTEND_URL,
     config.FRONTEND_URL ? config.FRONTEND_URL.replace(/\/$/, "") : "",
-    "https://international-international education-award.vercel.app",
-    "https://globalinternational educationawards.com",
-    "https://www.globalinternational educationawards.com",
-    "http://localhost:5173",
-    "http://localhost:5174",
   ],
   methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
@@ -77,6 +72,7 @@ app.use(
 );
 
 // Initialize Passport
+app.set('trust proxy', true); // Trust first proxy
 app.use(passport.initialize());
 app.use(passport.session());
 
@@ -163,7 +159,7 @@ app.use("/api/inquiries", inquiryRoutes);
 // Global Error Handler
 app.use(errorHandler);
 
-app.set('trust proxy', true); // Trust first proxy
+
 
 const server = app.listen(config.PORT, () => console.log(`Server running on port ${config.PORT}`));
 server.timeout = 600000; // 10 minutes for large photo uploads

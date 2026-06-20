@@ -18,10 +18,10 @@
   --font-accent: 'Space Grotesk', system-ui, sans-serif;
 
   /* ── Brand palette ──────────────────────────────────────────────── */
-  --gold: #D4A96A;
-  --gold-l: #EFC98A;
-  --gold-xl: #F7E4BE;
-  --gold-d: #9A6A2E;
+  --gold: #C8941E;
+  --gold-l: #F2C94C;
+  --gold-xl: #FBE8A6;
+  --gold-d: #8B6010;
   --navy: #0A0F1A;
   --navy-l: #111827;
   --royal: #4338CA;
@@ -42,7 +42,7 @@
   --glass-b: rgba(96, 165, 250, 0.18);
 
   /* ── Glows ──────────────────────────────────────────────────────── */
-  --glow-gold: 0 0 28px rgba(212, 169, 106, 0.42), 0 0 56px rgba(212, 169, 106, 0.14);
+  --glow-gold: 0 0 28px rgba(200, 148, 30, 0.42), 0 0 56px rgba(200, 148, 30, 0.14);
   --glow-royal: 0 0 28px rgba(67, 56, 202, 0.48), 0 0 56px rgba(67, 56, 202, 0.18);
   --glow-violet: 0 0 28px rgba(29, 78, 216, 0.48), 0 0 56px rgba(29, 78, 216, 0.18);
   --glow-sky: 0 0 28px rgba(251, 113, 133, 0.42), 0 0 56px rgba(251, 113, 133, 0.14);
@@ -244,11 +244,11 @@ h6 {
 
   0%,
   100% {
-    box-shadow: 0 0 10px rgba(212, 169, 106, 0.32), 0 0 22px rgba(212, 169, 106, 0.10);
+    box-shadow: 0 0 10px rgba(200, 148, 30, 0.32), 0 0 22px rgba(200, 148, 30, 0.10);
   }
 
   50% {
-    box-shadow: 0 0 22px rgba(212, 169, 106, 0.78), 0 0 48px rgba(212, 169, 106, 0.30), 0 0 84px rgba(212, 169, 106, 0.08);
+    box-shadow: 0 0 22px rgba(200, 148, 30, 0.78), 0 0 48px rgba(200, 148, 30, 0.30), 0 0 84px rgba(200, 148, 30, 0.08);
   }
 }
 
@@ -503,8 +503,8 @@ h6 {
 
 .animate-aurora {
   background: linear-gradient(270deg,
-      #D4A96A, #4338CA, #1D4ED8, #9F1239,
-      #EFC98A, #818CF8, #D4A96A);
+      #C8941E, #4338CA, #1D4ED8, #9F1239,
+      #F2C94C, #818CF8, #C8941E);
   background-size: 400% 400%;
   animation: aurora 8s ease infinite;
 }
@@ -653,7 +653,7 @@ h6 {
   /* nav glow button: keep colors, kill aurora cycle, just show final gradient */
   .nav-glow-btn {
     animation: none !important;
-    background: linear-gradient(135deg, #D4A96A, #0f0894, #4338CA) !important;
+    background: linear-gradient(135deg, #C8941E, #0f0894, #4338CA) !important;
   }
 }
 
@@ -869,7 +869,7 @@ h6 {
    ==================================================================== */
 
 .text-gradient-gold {
-  background: linear-gradient(135deg, #F7E4BE 0%, #EFC98A 35%, #D4A96A 70%, #9A6A2E 100%);
+  background: linear-gradient(135deg, #FBE8A6 0%, #F2C94C 35%, #C8941E 70%, #8B6010 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -906,7 +906,7 @@ h6 {
 }
 
 .text-gradient-fire {
-  background: linear-gradient(135deg, #F7E4BE, #D4A96A, #BE123C);
+  background: linear-gradient(135deg, #FBE8A6, #C8941E, #BE123C);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -941,7 +941,7 @@ h6 {
   inset: 0;
   background:
     radial-gradient(ellipse 72% 52% at 50% -8%, rgba(67, 56, 202, 0.22) 0%, transparent 56%),
-    radial-gradient(ellipse 52% 42% at 80% 16%, rgba(212, 169, 106, 0.16) 0%, transparent 46%),
+    radial-gradient(ellipse 52% 42% at 80% 16%, rgba(200, 148, 30, 0.16) 0%, transparent 46%),
     radial-gradient(ellipse 52% 42% at 16% 26%, rgba(159, 18, 57, 0.13) 0%, transparent 46%);
   pointer-events: none;
 }
@@ -969,8 +969,8 @@ h6 {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--gold-l);
-  border: 1px solid rgba(212, 169, 106, 0.34);
-  background: rgba(212, 169, 106, 0.10);
+  border: 1px solid rgba(200, 148, 30, 0.34);
+  background: rgba(200, 148, 30, 0.10);
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
   margin-bottom: 0.6rem;
@@ -982,7 +982,7 @@ h6 {
   .page-hero-badge {
     -webkit-backdrop-filter: none !important;
     backdrop-filter: none !important;
-    background: rgba(212, 169, 106, 0.18) !important;
+    background: rgba(200, 148, 30, 0.18) !important;
     /* slightly stronger to compensate */
   }
 }
@@ -1015,7 +1015,7 @@ h6 {
   height: 4px;
   margin: 0.6rem auto;
   border-radius: 9999px;
-  background: linear-gradient(90deg, transparent, #D4A96A, #4338CA, #1D4ED8, transparent);
+  background: linear-gradient(90deg, transparent, #C8941E, #4338CA, #1D4ED8, transparent);
   background-size: 200% 100%;
   animation: aurora 4s ease infinite;
   box-shadow: 0 0 13px rgba(67, 56, 202, 0.44);
@@ -1192,7 +1192,7 @@ h6 {
 }
 
 .bg-dot-pattern {
-  background-image: radial-gradient(rgba(212, 169, 106, 0.16) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(200, 148, 30, 0.16) 1px, transparent 1px);
   background-size: 22px 22px;
 }
 
@@ -1200,8 +1200,8 @@ h6 {
   background-image:
     linear-gradient(rgba(67, 56, 202, 0.05) 1px, transparent 1px),
     linear-gradient(90deg, rgba(67, 56, 202, 0.05) 1px, transparent 1px),
-    linear-gradient(rgba(212, 169, 106, 0.025) 2px, transparent 2px),
-    linear-gradient(90deg, rgba(212, 169, 106, 0.025) 2px, transparent 2px);
+    linear-gradient(rgba(200, 148, 30, 0.025) 2px, transparent 2px),
+    linear-gradient(90deg, rgba(200, 148, 30, 0.025) 2px, transparent 2px);
   background-size: 24px 24px, 24px 24px, 120px 120px, 120px 120px;
 }
 
@@ -1258,7 +1258,7 @@ h6 {
 }
 
 .orb-gold {
-  background: radial-gradient(circle, rgba(212, 169, 106, 0.28), transparent 70%);
+  background: radial-gradient(circle, rgba(200, 148, 30, 0.28), transparent 70%);
 }
 
 .orb-royal {
@@ -1325,7 +1325,7 @@ h6 {
   font-family: var(--font-heading);
   font-size: clamp(1.8rem, 4vw, 2.5rem);
   font-weight: 900;
-  background: linear-gradient(135deg, #F7E4BE, #D4A96A, #4338CA);
+  background: linear-gradient(135deg, #FBE8A6, #C8941E, #4338CA);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1346,7 +1346,7 @@ h6 {
 
 .section-divider {
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(67, 56, 202, 0.34), rgba(212, 169, 106, 0.24), transparent);
+  background: linear-gradient(90deg, transparent, rgba(67, 56, 202, 0.34), rgba(200, 148, 30, 0.24), transparent);
 }
 
 .reveal {
@@ -1374,11 +1374,11 @@ h6 {
   font-weight: 700;
   font-size: 0.82rem;
   letter-spacing: 0.03em;
-  background: linear-gradient(135deg, #D4A96A, #0f0894, #4338CA);
+  background: linear-gradient(135deg, #C8941E, #0f0894, #4338CA);
   background-size: 200% 200%;
   color: #fff !important;
-  border: 1px solid rgba(212, 169, 106, 0.4);
-  box-shadow: 0 0 16px rgba(212, 169, 106, 0.35), inset 0 0 8px rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(200, 148, 30, 0.4);
+  box-shadow: 0 0 16px rgba(200, 148, 30, 0.35), inset 0 0 8px rgba(255, 255, 255, 0.1);
   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   animation: aurora 6s ease infinite;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
@@ -1394,7 +1394,7 @@ h6 {
 
 .nav-glow-btn:hover {
   transform: translateY(-2px) scale(1.03);
-  box-shadow: 0 0 26px rgba(212, 169, 106, 0.65), 0 0 12px rgb(32, 16, 177), inset 0 0 12px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 26px rgba(200, 148, 30, 0.65), 0 0 12px rgb(32, 16, 177), inset 0 0 12px rgba(255, 255, 255, 0.2);
   border-color: rgba(255, 255, 255, 0.5);
   will-change: transform;
 }

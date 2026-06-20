@@ -216,17 +216,15 @@ export default function EditionDetail() {
                 <div className="space-y-16 sm:space-y-24 mt-16 sm:mt-24">
                     {/* Header Info */}
                     <header className="max-w-5xl text-center mx-auto">
-                        <div className="inline-flex items-center justify-center gap-3 mb-6">
+                        <div className="inline-flex items-center justify-center gap-3">
                             <div className="h-px w-8 bg-gradient-to-r from-transparent to-[#d4af37]"></div>
                             <span className="text-[#d4af37] text-xs sm:text-sm font-black uppercase tracking-[0.2em]">
                                 {edition?.editionLabel || "Previous Edition"}
                             </span>
                             <div className="h-px w-8 bg-gradient-to-l from-transparent to-[#d4af37]"></div>
                         </div>
-                        <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 leading-[1.15] tracking-tight">
-                            <span className="text-white drop-shadow-lg">INTERNATIONAL</span>
-                            <br className="hidden sm:block" />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-indigo-100 to-indigo-400 drop-shadow-[0_2px_15px_rgba(16,185,129,0.3)]"> {edition?.title || "International Education Award"} {displayYear}</span>
+                        <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[1.15] tracking-tight">
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-indigo-100 to-indigo-400 drop-shadow-[0_2px_15px_rgba(16,185,129,0.3)]">{edition?.title || "International Education Award"} {displayYear}</span>
                         </h1>
                         <p className="text-base sm:text-xl text-slate-300 leading-relaxed max-w-3xl mx-auto whitespace-pre-line font-medium">
                             {edition?.hero || `The ${displayYear} ${edition?.title || "International Education Award"} celebrated the visionaries, institutions, and clinical leaders who redefined medical standards internationally.`}
