@@ -14,7 +14,7 @@ export function getBaseUrl() {
 
   // 2. If no .env is found, fallback to hardcoded production URL
   if (import.meta.env?.PROD) {
-    return "https://api.internationaleducation.in";
+    return "https://api.internationaleducationaward.com";
   }
 
 
